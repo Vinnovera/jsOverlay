@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jsOverlay Demo</title>
+		<link rel="stylesheet" href="css/flat-ui.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<header class="mainheader">
+			<h1 class="headline">jsOverlay Demo</h1>
+		</header>
+		<div role="main">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nulla sem, bibendum rutrum odio non, gravida molestie diam. Curabitur feugiat ut leo nec fermentum. Mauris est tortor, ultrices eget nulla eget, consequat imperdiet ligula. Aliquam fermentum lectus lectus, eu pharetra justo ornare vitae.</p>
+			<a href="#fakelink" class="btn btn-block btn-lg btn-primary" id="openoverlay">Open overlay</a>
+			<a href="#fakelink" class="btn btn-block btn-lg btn-primary" id="openimage">Open image</a>
+			<a href="#fakelink" class="btn btn-block btn-lg btn-primary" id="openmap">Open map</a>
+			<div id="map-wrapper" class="map-wrapper">
+				<div id="map-holder" class="map-holder"></div>
+			</div>
+		</div>
+		<script src="js/vendor/ready.min.js"></script>
+		<script src="js/vendor/underscore-min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkGoo021cGpUZ1qbvTxjxfl2QO9skv-U0&sensor=false" type="text/javascript"></script>
+		<script src="../src/jsoverlay.js"></script>
+		<script type="foo/bar" id='usageList'>
+			<ul>
+				<%
+				// repeat items 
+				_.each(items,function(item,key,list){
+					// create variables
+					var f = item.name.split("").shift().toLowerCase();
+				%>
+					<li>
+						<p><%= key %></p>
+						<p><a href="http://www.google.se/"><%- item.name %></a></p>
+						<p><%- item.interests %></p>
+					</li>
+				<%
+				});
+				%>
+			</ul>
+		</script>
+		<script type="foo/bar" id='imageDemo'>
+			<%
+			// repeat items 
+			_.each(items,function(item,key,list){
+			%>
+				<a href="<%- item.url %>" target="_blank">
+					<img src="<%- item.url %>" id="<%- item.id %>">
+				</a>
+			<%
+			});
+			%>
+		</script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

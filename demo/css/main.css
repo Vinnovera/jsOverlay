@@ -1,0 +1,61 @@
+.mainheader,
+body > div[role="main"] {
+	max-width: 960px;
+	margin: 0 auto;
+}
+body > div[role="main"] a.btn {
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.mainheader > .headline {
+	text-align: center;
+}
+
+.content-holder {
+	background: #fff;
+	width: 500px;
+}
+.content-holder ul {
+	margin: 0;
+	list-style: none;
+	background: #C0392B;
+	color: #fff;
+	padding: 20px;
+	vertical-align: top;
+}
+.content-holder ul p {
+	margin: 0;
+}
+
+.image-holder {
+	width: auto;
+	text-align: center;
+}
+.image-holder img {
+	max-width: 100%;
+	max-height: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+.map-wrapper {
+	width: 500px;
+	height: 500px;
+	max-width: 100%;
+	margin-top: 20px;
+}
+.map-holder {
+	width: 100%;
+	height: 100%;
+}
+
+.jso-overlay {
+	background: rgb(0, 0, 0) transparent;
+	background: rgba(0, 0, 0, 0.9);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ee000000, endColorstr=#ee000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ee000000, endColorstr=#ee000000)";
+}
+.jso-closebutton {
+	cursor: pointer;
+}
