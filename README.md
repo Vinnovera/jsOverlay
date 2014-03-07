@@ -10,7 +10,7 @@ The reason to use jsOverlay for your lightboxing is to get something that works 
 ## How to use
 When creating a new overlay, make a new object like so:
 
-```
+```javascript
 jso = new jsOverlay({
 	content: 'my_content'
 });
@@ -25,7 +25,7 @@ Also as a default, the close-button will get the CSS class "jso-close", and the 
 ## Options
 There are serveral options that you can use to modify the behaviour of jsOverlay. The default options-object looks like this:
 
-```
+```javascript
 {
 	content: '',
 	showOnCreate: true,
