@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>jsOverlay Demo</title>
+		<link rel="stylesheet" href="css/flat-ui.css">
+		<link rel="stylesheet" href="css/imageslider.css">
+	</head>
+	<body>
+		<header class="mainheader">
+			<h1 class="headline">jsOverlay Demo</h1>
+		</header>
+		<div role="main">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nulla sem, bibendum rutrum odio non, gravida molestie diam. Curabitur feugiat ut leo nec fermentum. Mauris est tortor, ultrices eget nulla eget, consequat imperdiet ligula. Aliquam fermentum lectus lectus, eu pharetra justo ornare vitae.</p>
+			<a href="#fakelink" class="btn btn-block btn-lg btn-primary" id="openoverlay">Open image slider</a>
+		</div>
+		<script src="js/vendor/ready.min.js"></script>
+		<script src="js/vendor/underscore-min.js"></script>
+		<script src="js/vendor/iscroll.js"></script>
+		<script src="../src/jsoverlay.js"></script>
+		<script type="foo/bar" id='imageSliderTemplate'>
+			<div id="imageslider_holder" class="imageslider_holder">
+				<ul id="imageslider" class="imageslider">
+				<%
+				// repeat items 
+				_.each(items,function(item,key,list){
+				%>
+					<li id="<%- item.id %>">
+						<a href="<%- item.url %>" target="_blank" class="imageslider_image_link"-->
+							<img src="<%- item.url %>" class="imageslider_image">
+						</a>
+					</li>
+				<%
+				});
+				%>
+				</ul>
+			</div>
+		</script>
+		<script src="js/imageslider.js"></script>
+	</body>
+</html>

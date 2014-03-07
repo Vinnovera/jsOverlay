@@ -1,0 +1,65 @@
+/* Basic page styling */
+.mainheader,
+body > div[role="main"] {
+	max-width: 960px;
+	margin: 0 auto;
+}
+body > div[role="main"] a.btn {
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+.mainheader > .headline {
+	text-align: center;
+}
+
+
+/* Overlay styling */
+.jso-overlay {
+	background: rgb(0, 0, 0) transparent;
+	background: rgba(0, 0, 0, 0.9);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ee000000, endColorstr=#ee000000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ee000000, endColorstr=#ee000000)";
+}
+.jso-closebutton {
+	cursor: pointer;
+}
+
+
+/* Slider CSS */
+.sliderwrapper {
+	width: 100%;
+	overflow: hidden;
+}
+.imageslider_holder {
+	width: 100%;
+	height: 100%;
+}
+	.imageslider_holder > ul.imageslider {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+
+		display: table;
+		table-layout: fixed;
+	}
+		.imageslider_holder > ul.imageslider > li {
+			text-align: center;
+			background: url('ajax-loader.gif') no-repeat 50% 50%;
+			
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+		}	
+			.imageslider_image_link {
+				display: block;
+				padding: 20px;
+			}	
+				.imageslider_holder > ul.imageslider img.imageslider_image {
+					max-width: 100%;
+					max-height: 100%;
+					vertical-align: middle;
+				}
