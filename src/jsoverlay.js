@@ -9,11 +9,12 @@
 	// Reference DOM root
 	var d = w.document;
 	var doc = d.documentElement;
-	var b = d.body;
+	var b;
 	var _this = null;
 	var goodAndroidVersion = 4;
 
 	jsOverlay = function(o){
+		b = d.body;
 		_this = this;
 		if(o){
 			this.options = deepextend(this.options, o);
